@@ -11,7 +11,7 @@ import java.io.IOException;
 public class RestartServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         req.getSession().invalidate();
         resp.sendRedirect("/start");
     }
